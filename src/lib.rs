@@ -16,25 +16,6 @@ use instructions::*;
 
 pinocchio_pubkey::declare_id!("3X4xfxBGSWDc24HhACGxk5VdDAJzg9mxtUvvHvwjQcec");
 
-pub enum MultisigInstructions {
-    InitializeMultisig,
-    AddMember { member: Pubkey },
-    RemoveMember { member: Pubkey },
-    InitializeProposal {
-        multisig: Pubkey,
-        proposal: Pubkey,
-        proposer: Pubkey,
-        proposal_expiry_duration: u64
-    },
-    ProcessVote {
-        multisig: Pubkey,
-        proposal: Pubkey,
-        voter: Pubkey,
-        vote_account: Pubkey,
-        vote_type: u8,
-    },
-}
-
 pub fn process_instruction(
     program_id: &Pubkey,
     accounts: &[AccountInfo],
