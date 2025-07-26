@@ -1,0 +1,18 @@
+cargo-features = ["edition2024"]
+
+[package]
+name = "multisig_pinocchio"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+mollusk-svm = "0.4.1"
+pinocchio = { git = "https://github.com/anza-xyz/pinocchio.git" }
+pinocchio-log = { git = "https://github.com/anza-xyz/pinocchio.git" }
+pinocchio-pubkey = { git = "https://github.com/anza-xyz/pinocchio.git" }
+pinocchio-system = { git = "https://github.com/anza-xyz/pinocchio.git" }
+shank = "0.4.2"
+solana-sdk = "2.3.1"
